@@ -1,0 +1,27 @@
+{{> header}}
+
+<h1>{{title}}</h1>
+
+<div class="compose">
+
+    <section>
+        {{#article}}
+        <form action="{{#add}}/article/add{{/add}}" name="article" method="POST">
+            <label for="title">Title</label>
+            <br/>
+            <input type="text" name="title" value="{{#title}}{{title}}{{/title}}"/>
+            <br/>
+            <br/>
+            <label for="content">Content</label>
+            <br/>
+            <input type="text" name="content" value="{{#content}}{{content}}{{/content}}"/>
+            <br/>
+            <br/>
+            <input type="submit" value="{{#add}}Post{{/add}}"/>
+        </form>
+        {{/article}}
+    </section>
+
+</div>
+
+{{> footer}}
